@@ -15,8 +15,13 @@
 		<rich:panel>
 			<h:panelGrid>
 				<h1>Cadastro de Inquilino</h1>
+				<rich:toolBar>
+					<rich:dropDownMenu value="Inquilino">
+						<rich:menuItem value="Cadastrar" action="cadastrarInquilino" />
+					</rich:dropDownMenu>
+				</rich:toolBar>
 				<h:outputText value="Nome do Inquilino"/>
-				<h:inputText value="#{inquilinoBean.inquilino.nome}"/>
+				<h:inputText value="#{}"/>
 				<h:outputText value="Data de Nasciemtno do Inquilino"/>
 				<h:inputText value="#{inquilinoBean.inquilino.data_nascimento}">
 					<f:convertDateTime pattern="dd/MM/yyyy" locale="pt_BR"/>
