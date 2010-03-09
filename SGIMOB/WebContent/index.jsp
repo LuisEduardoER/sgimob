@@ -21,7 +21,7 @@
 					</rich:dropDownMenu>
 				</rich:toolBar>
 				<h:outputText value="Nome do Inquilino"/>
-				<h:inputText value="#{}"/>
+				<h:inputText value="#{inquilinoBean.inquilino.nome}"/>
 				<h:outputText value="Data de Nasciemtno do Inquilino"/>
 				<h:inputText value="#{inquilinoBean.inquilino.data_nascimento}">
 					<f:convertDateTime pattern="dd/MM/yyyy" locale="pt_BR"/>
