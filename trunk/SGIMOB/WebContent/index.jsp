@@ -25,6 +25,9 @@
 				<h:inputText value="#{inquilinoBean.inquilino.endereco}"/>
 				<h:outputText value="Telefone do Inquilino"/>
 				<h:inputText value="#{inquilinoBean.inquilino.telefone}"/>
+				<h:selectOneMenu value="#{inquilinoBean.inquilino.id}">
+					<f:selectItems value="#{inquilinoBean.listaItems}" />
+				</h:selectOneMenu>
 				<h:commandButton value="Teste" action="#{inquilinoBean.incluir}"/>
 			</h:panelGrid>	
 		</rich:panel>
