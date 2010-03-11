@@ -10,5 +10,201 @@
 		<managed-bean-class>br.com.fsinformatica.projeto.apresentacao.mbean.InquilinoBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
-
+	<managed-bean>
+		<managed-bean-name>tipoImovelBean</managed-bean-name>
+		<managed-bean-class>br.com.fsinformatica.projeto.apresentacao.mbean.TipoImovelBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>proprietarioBean</managed-bean-name>
+		<managed-bean-class>br.com.fsinformatica.projeto.apresentacao.mbean.ProprietarioBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>imovelBean</managed-bean-name>
+		<managed-bean-class>br.com.fsinformatica.projeto.apresentacao.mbean.ImovelBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+	<navigation-rule>
+		<display-name>index</display-name>
+		<from-view-id>/index.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>sucesso</from-outcome>
+			<to-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index</display-name>
+		<from-view-id>/index.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarTipoImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroTipoImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>sucesso</from-outcome>
+			<to-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index</display-name>
+		<from-view-id>/index.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarInquilinoAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroInquilinoAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>sucesso</from-outcome>
+			<to-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroInquilinoAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarInquilinoAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroTipoImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarInquilinoAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroInquilinoAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarTipoImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarTipoImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroTipoImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index</display-name>
+		<from-view-id>/index.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarProprietarioAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroInquilinoAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarProprietarioAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarProprietarioAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroTipoImovelAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarProprietarioAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroProprietarioAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarInquilinoAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Inquilino/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroProprietarioAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/Imovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroProprietarioAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrarTipoImovelAdmin</from-outcome>
+			<to-view-id>/Paginas/Administracao/TipoImovel/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>cadastroProprietarioAdmin</display-name>
+		<from-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Sucesso</from-outcome>
+			<to-view-id>/Paginas/Administracao/Proprietario/cadastro.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
 </faces-config>
