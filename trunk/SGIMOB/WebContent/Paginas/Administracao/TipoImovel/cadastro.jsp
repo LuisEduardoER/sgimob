@@ -8,10 +8,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>SGIMOB - Sistema de Gerenciamento Imobiliario</title>
 </head>
 <body>
 <f:view>
+	
 	<h:form>
 		<rich:toolBar>
 			<rich:dropDownMenu value="Administração">
@@ -21,8 +22,19 @@
 				<rich:menuItem value="Tipo de Imóvel" action="cadastrarTipoImovelAdmin"/>
 			</rich:dropDownMenu>
 		</rich:toolBar>
-		<rich:panel style="height:498px;">
-
+		<rich:panel styleClass="panelPrincipal">
+			<center>
+			<rich:panel style="width:300px; margin-top:50px;margin-bottom:50px;">
+				<h3>Cadastro dos Tipos de Imóvel</h3>
+				<rich:messages />
+				<h:panelGrid columns="2">
+					<h:outputText value="Tipo de imóvel" />
+					<h:inputText value="#{tipoImovelBean.tipoImovel.nome}"/>
+					<h:outputText value="Descrição do tipo de imóvel" />
+					<h:inputText value="#{tipoImovelBean.tipoImovel.descricao}"/>
+				</h:panelGrid>
+				<h:commandButton value="Cadastrar" action="#{tipoImovelBean.incluir}" />
+			</rich:panel></center>
 		</rich:panel>
 	</h:form>
 </f:view>
